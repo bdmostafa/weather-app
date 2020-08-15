@@ -691,7 +691,7 @@ form input[type="reset"] {
 }
 
 .forecast-container .forecast.today .forecast-content {
-    text-align: left;
+    text-align: center;
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -711,7 +711,7 @@ form input[type="reset"] {
 .forecast-container .forecast.today .degree .num {
     font-size: 90px;
     font-size: 6.4285714286rem;
-    margin-right: 30px;
+    margin-right: .5rem;
 }
 
 .forecast-container .forecast.today span {
@@ -807,4 +807,16 @@ form input[type="reset"] {
 .site-footer .social-links a:hover {
     background: #009ad8;
     color: white;
+}
+
+.location-time {
+    margin-bottom: 1.5rem;
+}
+
+#location {
+    float: left;
+}
+
+#time {
+    float: right;
 }

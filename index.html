@@ -43,24 +43,33 @@
                 <div class="today forecast">
                     <div class="forecast-header">
                         <div id="day-today" class="day">Monday</div>
-                        <div id="date-today" class="date">6 Oct</div>
+                        <div id="time" class="time"> 12.45 AM </div>
+                        <div id="date-today" class="date"> 6 Oct </div>
                     </div>
                     <!-- .forecast-header -->
                     <div class="forecast-content">
-                        <div id="location" class="location">New York</div>
-                        <div class="degree">
-                            <div class="num">23<sup>o</sup>C</div>
-                            <div class="forecast-icon">
-                                <img src="images/icons/icon-1.svg" alt="" width="90" />
+                        <div class="location-time">
+                            <div id="location" class="location">New York</div>
+                            <div>
+                                <h2 id="feels">Cloudy</h2>
                             </div>
                         </div>
-                        <span><img src="images/icon-umberella.png" alt="" />20%</span>
-                        <span><img src="images/icon-wind.png" alt="" />18km/h</span>
-                        <span><img src="images/icon-compass.png" alt="" />East</span>
-                        <span><img src="images/icon-wind.png" alt="" />Humidity</span>
-                        <span><img src="images/icon-compass.png" alt="" />Pressure</span>
-                        <span><img src="images/icon-wind.png" alt="" />Sunrise</span>
-                        <span><img src="images/icon-compass.png" alt="" />Sunset</span>
+                        <div class="degree">
+                            <div id="temperature" class="num">23<sup>o</sup>C</div>
+                            <div class="forecast-icon">
+                                <i><img id="main-forecast-icon" src="images/icons/icon-1.svg" alt="" width="90" /></i>
+                            </div>
+                        </div>
+                        <span><img src="images/icon-umberella.png" alt="" />Feelings <span
+                                id="feelings">30</span></span>
+                        <span><img src="images/icon-umberella.png" alt="" />Cloudiness <span
+                                id="cloudiness">20%</span></span>
+                        <span><img src="images/icon-wind.png" alt="" />Wind <span id="wind">18m/h</span></span>
+                        <span><img src="images/icon-wind.png" alt="" />Humidity <span id="humidity">55</span></span>
+                        <span><img src="images/icon-wind.png" alt="" />Pressure (hpa) <span
+                                id="pressure">1023</span></span>
+                        <span><img src="images/icon-wind.png" alt="" />Sunrise <span id="sunrise">5.65 am</span></span>
+                        <span><img src="images/icon-wind.png" alt="" />Sunset <span id="sunset">7.25pm</span></span>
                     </div>
                 </div>
                 <div class="forecast">
