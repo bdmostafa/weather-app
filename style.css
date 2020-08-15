@@ -840,3 +840,15 @@ form input[type="reset"] {
     color: transparent;
     font-size: 2.15rem;
 }
+
+/* #alert {
+    display: none;
+    width: 90%;
+    padding: 1rem;
+    display: inline-block;
+    margin: 0 auto;
+    background-color: azure;
+    position: relative;
+    min-height: 10vh;
+    margin-left: 5%;
+} */
