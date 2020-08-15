@@ -19,7 +19,7 @@
     <header class="site-header">
         <div class="container">
             <a href="index.html" class="branding">
-                <img src="images/logo.png" alt="" class="logo" />
+                <img src="images/weatherlogo.png" alt="" class="logo" />
                 <div class="logo-type">
                     <h1 class="site-title">Best Weather App</h1>
                 </div>
@@ -32,7 +32,8 @@
         <div class="container">
             <form action="#" class="find-location">
                 <input type="text" placeholder="Enter your City..." />
-                <input type="text" placeholder="Enter your Country..." />
+                <input type="text"
+                    placeholder="Your Country...use ISO 3166 country codes or 2 letter of your country" />
                 <input type="submit" value="Search" />
             </form>
         </div>
@@ -42,33 +43,30 @@
             <div class="forecast-container">
                 <div class="today forecast">
                     <div class="forecast-header">
-                        <div id="day-today" class="day">Monday</div>
-                        <div id="date-time" class="date-time">15-07-2020 12.45</div>
+                        <div id="day-today" class="day"></div>
+                        <div id="date-time" class="date-time"></div>
                     </div>
                     <!-- .forecast-header -->
                     <div class="forecast-content">
                         <div class="location-time">
-                            <div id="location" class="location">New York</div>
+                            <div id="location" class="location"></div>
                             <div>
-                                <h2 id="weather-description">Cloudy</h2>
+                                <h2 id="weather-description"></h2>
                             </div>
                         </div>
                         <div class="degree">
-                            <div id="temperature" class="num">23<sup>o</sup>C</div>
+                            <div id="temperature" class="num"></div>
                             <div class="forecast-icon">
-                                <i><img id="main-forecast-icon" src="images/icons/icon-1.svg" alt="" width="90" /></i>
+                                <i><img id="main-forecast-icon" src="" alt="" width="100" /></i>
                             </div>
                         </div>
-                        <span><img src="images/icon-umberella.png" alt="" />Feelings <span
-                                id="feelings">30</span></span>
-                        <span><img src="images/icon-umberella.png" alt="" />Cloudiness <span
-                                id="cloudiness">20%</span></span>
-                        <span><img src="images/icon-wind.png" alt="" />Wind<span id="wind"></span></span>
-                        <span><img src="images/icon-wind.png" alt="" />Humidity <span id="humidity">55</span></span>
-                        <span><img src="images/icon-wind.png" alt="" />Pressure (hPa) <span
-                                id="pressure">1023</span></span>
-                        <span><img src="images/icon-wind.png" alt="" />Sunrise <span id="sunrise">5.65 am</span></span>
-                        <span><img src="images/icon-wind.png" alt="" />Sunset <span id="sunset">7.25pm</span></span>
+                        <span><img src="images/humanfeelings.png" alt="" />Feelings <span id="feelings"></span></span>
+                        <span><img src="images/umbrella.png" alt="" />Cloudiness <span id="cloudiness"></span></span>
+                        <span><img src="images/wind.png" alt="" />Wind<span id="wind"></span></span>
+                        <span><img src="images/humidity.png" alt="" />Humidity <span id="humidity"></span></span>
+                        <span><img src="images/pressure.png" alt="" />Pressure (hPa) <span id="pressure"></span></span>
+                        <span><img src="images/sunrise.png" alt="" />Sunrise <span id="sunrise"></span></span>
+                        <span><img src="images/sunset.png" alt="" />Sunset <span id="sunset"></span></span>
                     </div>
                 </div>
                 <div class="forecast">
