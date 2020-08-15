@@ -26,6 +26,7 @@ class Store {
         }
     }
     setLocation(city, country) {
+        console.log(city, country)
         localStorage.setItem('city', city);
         localStorage.setItem('country', country);
     }
