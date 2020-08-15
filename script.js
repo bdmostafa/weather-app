@@ -25,16 +25,11 @@ class Weather {
         }
 
     }
-    setLocation(city, country) {
+    changeLocation(city, country) {
         this.city = city;
         this.country = country;
     }
 }
-
-// Instantiate weather class
-const weather = new Weather('Dhaka', 'BD', apiId)
-// weather.setLocation('Los Angeles', 'US')
-weather.setLocation('Edmonton', 'CA')
 
 
 // Handle UI of Weather App =================================
@@ -110,13 +105,89 @@ class UI {
         // console.log(icon)
         return `http://openweathermap.org/img/w/${icon}.png`;
     }
+    static clearField() {
+        document.getElementById('city').value = '';
+        document.getElementById('country').value = '';
+    }
 }
+
+// Handle local storage part =============================
+class Store {
+    constructor() {
+        this.city;
+        this.country;
+        this.defaultCity = 'Dhaka';
+        this.defaultCountry = 'BD';
+    }
+    getLocation() {
+        // Get city from local storage
+        if (localStorage.getItem('city') === null) {
+            this.city = this.defaultCity;
+        } else {
+            this.city = localStorage.getItem('city')
+        }
+
+        // Get country from local storage
+        if (localStorage.getItem('country') === null) {
+            this.country = this.defaultCountry;
+        } else {
+            this.country = localStorage.getItem('country')
+        }
+        return {
+            city: this.city,
+            country: this.country
+        }
+    }
+    setLocation(city, country) {
+        localStorage.setItem('city', city);
+        localStorage.setItem('country', country);
+    }
+}
+
+// Instantiate Store
+const store = new Store();
+
+// Object destructuring that is from store.getLocation()'s return
+const {
+    city,
+    country
+} = store.getLocation();
+// console.log(store.getLocation()); // {city: null, country: null}
+// console.log(city, country); // null null (both are same)
+
+
+
+// Instantiate weather class
+const weather = new Weather(city, country, apiId)
 
 // Instantiate ui
 const ui = new UI();
 
+function weatherData() {
+    weather
+        .getWeather()
+        .then(data => {
+            ui.paint(data);
+            console.log(data)
+        })
+        .catch(err => {
+            alert(`Oops! Your city is not found.`)
+        })
+}
 
-weather.getWeather().then(data => {
-    ui.paint(data);
-    console.log(data)
+
+// Event Listeners =====================================================
+// weatherData() executes when browser reloaded
+document.addEventListener('DOMContentLoaded', weatherData);
+document.getElementById('form').addEventListener('submit', e => {
+    e.preventDefault();
+    const city = document.getElementById('city').value;
+    const country = document.getElementById('country').value;
+    if (city === '' || country === '') {
+        alert("Please provide necessary information");
+    } else {
+        weather.changeLocation(city, country);
+        UI.clearField();
+        weatherData();
+    }
 })

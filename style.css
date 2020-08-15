@@ -624,7 +624,7 @@ form input[type="reset"] {
 }
 
 .find-location input[type="text"] {
-    width: 45%;
+    width: 50%;
     padding: 20px 50px 20px 20px;
     background: #1e202b;
     color: white;
@@ -711,7 +711,7 @@ form input[type="reset"] {
 
 .forecast-container .forecast.today .degree .num {
     font-size: 90px;
-    font-size: 6.4285714286rem;
+    font-size: 4rem;
     margin-right: .5rem;
 }
 
@@ -821,4 +821,22 @@ form input[type="reset"] {
 
 #date-time {
     float: right;
+}
+
+#city {
+    width: 30%
+}
+
+#main-forecast-icon {
+    margin-top: -2.5rem;
+    width: 10rem;
+}
+
+.multiColorText {
+    background-image: linear-gradient(to left, rgba(236, 231, 236, 0.445), rgba(165, 66, 236, 0.87), rgb(34, 240, 34), rgba(112, 112, 204, 0.89), rgba(238, 201, 133, 0.842), rgba(231, 69, 69, 0.829));
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 2.15rem;
 }

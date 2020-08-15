@@ -30,9 +30,9 @@
 
     <div class="hero" data-bg-image="images/banner.png">
         <div class="container">
-            <form action="#" class="find-location">
-                <input type="text" placeholder="Enter your City..." />
-                <input type="text"
+            <form id="form" class="find-location">
+                <input id="city" type="text" placeholder="Enter your City..." />
+                <input id="country" type="text"
                     placeholder="Your Country...use ISO 3166 country codes or 2 letter of your country" />
                 <input type="submit" value="Search" />
             </form>
@@ -51,7 +51,7 @@
                         <div class="location-time">
                             <div id="location" class="location"></div>
                             <div>
-                                <h2 id="weather-description"></h2>
+                                <h2 id="weather-description" class="multiColorText"></h2>
                             </div>
                         </div>
                         <div class="degree">
