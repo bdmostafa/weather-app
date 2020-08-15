@@ -11,7 +11,6 @@ const {
 } = store.getLocation();
 // console.log(store.getLocation()); // {city: null, country: null}
 // console.log(city, country); // null null (both are same)
-console.log(city, country)
 
 // Instantiate weather class
 const weather = new Weather(city, country, apiId)

@@ -23,8 +23,8 @@ class Weather {
         } catch (err) {
             alert(`Your spelling is not matched. Please try again with a right spelling.`)
         }
-
     }
+    // Change the existing location
     changeLocation(city, country) {
         this.city = city;
         this.country = country;
