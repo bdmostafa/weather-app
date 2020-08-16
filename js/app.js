@@ -1,7 +1,7 @@
 // Import APPID from appId.js
 import {
     apiId
-} from './appId.js'
+} from './apiId.js'
 
 
 // Instantiate Store
@@ -20,6 +20,7 @@ const {
 
 // Instantiate weather class
 const weather = new Weather(city, country, apiId)
+console.log(weather)
 
 function weatherData() {
     weather

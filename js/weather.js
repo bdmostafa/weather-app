@@ -9,7 +9,7 @@ class Weather {
         try {
             const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${this.city},${this.country}&APPID=${this.appId}&units=metric`);
             const response = await data.json();
-            // console.log(response);
+            console.log(response);
 
             // Return the essential data as an object data from the whole response data 
             return {
