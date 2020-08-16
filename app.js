@@ -1,3 +1,9 @@
+// Import APPID from appId.js
+import {
+    apiId
+} from './appId.js'
+
+
 // Instantiate Store
 const store = new Store();
 
