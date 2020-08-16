@@ -1,4 +1,3 @@
-const apiId = 'c26c6010e343573d2391962f7361a387';
 // Instantiate Store
 const store = new Store();
 
