@@ -1,7 +1,7 @@
 // Import APPID from appId.js
 import {
     apiId
-} from './appId.js'
+} from '../js/appId.js'
 
 
 // Instantiate Store
