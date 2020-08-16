@@ -11,7 +11,7 @@ const {
 } = store.getLocation();
 // console.log(store.getLocation()); // {city: null, country: null}
 // console.log(city, country); // null null (both are same)
-
+const apiId = 'c26c6010e343573d2391962f7361a387';
 // Instantiate weather class
 const weather = new Weather(city, country, apiId)
 
