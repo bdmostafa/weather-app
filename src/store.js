@@ -31,3 +31,7 @@ class Store {
         localStorage.setItem('country', country);
     }
 }
+
+// Instantiate and export
+// ES6 modular pattern
+export const store = new Store();

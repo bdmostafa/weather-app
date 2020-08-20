@@ -76,3 +76,7 @@ class UI {
         document.getElementById('country').value = '';
     }
 }
+
+// Instantiate and export
+// ES6 modular pattern
+export const ui = new UI();

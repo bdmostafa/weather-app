@@ -1,14 +1,14 @@
-// Import APPID from appId.js
+// Import apiId, ui, weather, store
 import {
     apiId
-} from './apiId.js'
-
-
-// Instantiate Store
-const store = new Store();
-
-// Instantiate ui
-const ui = new UI();
+} from './apiId.js';
+import {
+    store
+} from './store';
+import {
+    ui
+} from './ui';
+import Weather from './weather';
 
 // Object destructuring that is from store.getLocation()'s return
 const {
@@ -18,9 +18,11 @@ const {
 // console.log(store.getLocation()); // {city: null, country: null}
 // console.log(city, country); // null null (both are same)
 
+
+
 // Instantiate weather class
 const weather = new Weather(city, country, apiId)
-console.log(weather)
+// console.log(weather)
 
 function weatherData() {
     weather
@@ -47,7 +49,7 @@ document.getElementById('form').addEventListener('submit', e => {
     } else {
         weather.changeLocation(city, country);
         store.setLocation(city, country);
-        UI.clearField();
         weatherData();
+        UI.clearField();
     }
 })

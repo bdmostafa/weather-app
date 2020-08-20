@@ -1,5 +1,5 @@
 // Handle backend Weather data ======================================
-class Weather {
+export default class Weather {
     constructor(city, country, apiId) {
         this.city = city;
         this.country = country;
