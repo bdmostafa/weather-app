@@ -633,11 +633,17 @@ form input[type="reset"] {
 }
 
 .find-location input[type="submit"] {
-    position: absolute;
-    top: 5px;
-    right: 5px;
+    position: relative;
+    top: 0px;
+    right: 0px;
     bottom: 5px;
     padding: 0 40px;
+    width: 10rem;
+    height: 50px;
+    font-size: 18px;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 5px;
 }
 
 .forecast-container {
